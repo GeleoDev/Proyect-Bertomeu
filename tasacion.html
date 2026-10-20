@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasaciones · Bertomeu Propiedades</title>
+  <meta name="description" content="Pedí la tasación de tu propiedad en Merlo y Zona Oeste. Visitamos tu propiedad y te damos un valor de mercado, sin compromiso.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Figtree:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tasacion.css">
+</head>
+<body data-page="tasacion">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="page">
+  <div class="nav-wrap" id="site-nav"></div>
+
+  <main id="contenido">
+    <header class="page-head">
+      <div class="container t-grid">
+        <div class="t-intro">
+          <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span>Tasaciones</span></nav>
+          <h1 class="h-hero rise">Tasá tu <span class="it">propiedad</span></h1>
+          <p class="lead rise d1">Visitamos tu propiedad y te damos un valor de mercado, basado en propiedades similares de la zona. Es sin compromiso.</p>
+          <ul class="ticks rise d2">
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>La hace un martillero matriculado</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Usamos operaciones reales de Zona Oeste</li>
+            <li><i class="fa-solid fa-check" aria-hidden="true"></i>Te explicamos cómo llegamos al valor</li>
+          </ul>
+          <a class="btn btn-soft rise d3" href="https://api.whatsapp.com/send?phone=5491152267955&text=Hola%2C%20quiero%20tasar%20mi%20propiedad" target="_blank" rel="noopener" style="align-self:flex-start"><i class="fa-brands fa-whatsapp" aria-hidden="true" style="color:#156B37"></i>También por WhatsApp</a>
+        </div>
+
+        <!-- FORMULARIO EN 4 PASOS -->
+        <form class="wizard rise d2" id="wizard" novalidate aria-label="Formulario de tasación">
+          <div class="w-head">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span class="h-s">Pedí tu tasación</span><span class="muted small" id="w-label" aria-live="polite">Paso 1 de 4</span></div>
+            <div class="w-dots" aria-hidden="true">
+              <div class="w-dot now"><span class="bar"><span></span></span>Objetivo</div>
+              <div class="w-dot"><span class="bar"><span></span></span>Ubicación</div>
+              <div class="w-dot"><span class="bar"><span></span></span>Detalles</div>
+              <div class="w-dot"><span class="bar"><span></span></span>Contacto</div>
+            </div>
+          </div>
+
+          <fieldset class="w-body" data-step="1">
+            <legend class="w-q">¿Para qué es la tasación?</legend>
+            <div class="tiles" data-group="objetivo">
+              <button type="button" class="tile is-on" data-value="Para vender" aria-pressed="true"><i class="fa-solid fa-house" aria-hidden="true"></i><strong>Para vender</strong><span>Valor de publicación</span></button>
+              <button type="button" class="tile" data-value="Para alquilar" aria-pressed="false"><i class="fa-solid fa-key" aria-hidden="true"></i><strong>Para alquilar</strong><span>Valor del alquiler mensual</span></button>
+              <button type="button" class="tile" data-value="Para saber el valor" aria-pressed="false"><i class="fa-regular fa-lightbulb" aria-hidden="true"></i><strong>Para saber</strong><span>Sucesiones, separaciones u otros</span></button>
+            </div>
+            <h2 class="w-q" style="font-size:22px">¿Qué tipo de propiedad es?</h2>
+            <div class="tiles" data-group="tipo">
+              <button type="button" class="tile row is-on" data-value="Casa" aria-pressed="true"><i class="fa-solid fa-house" aria-hidden="true"></i><strong>Casa</strong></button>
+              <button type="button" class="tile row" data-value="Departamento" aria-pressed="false"><i class="fa-solid fa-building" aria-hidden="true"></i><strong>Departamento</strong></button>
+              <button type="button" class="tile row" data-value="PH" aria-pressed="false"><i class="fa-solid fa-house-chimney-window" aria-hidden="true"></i><strong>PH</strong></button>
+              <button type="button" class="tile row" data-value="Local" aria-pressed="false"><i class="fa-solid fa-store" aria-hidden="true"></i><strong>Local</strong></button>
+              <button type="button" class="tile row" data-value="Terreno" aria-pressed="false"><i class="fa-solid fa-seedling" aria-hidden="true"></i><strong>Terreno</strong></button>
+              <button type="button" class="tile row" data-value="Quinta" aria-pressed="false"><i class="fa-solid fa-tree" aria-hidden="true"></i><strong>Quinta</strong></button>
+            </div>
+          </fieldset>
+
+          <fieldset class="w-body" data-step="2" hidden>
+            <legend class="w-q">¿Dónde está?</legend>
+            <label class="field"><span class="label">Calle y altura</span><span class="input-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><input class="input" type="text" name="direccion" placeholder="Ej.: Maipú 785" required></span></label>
+            <div class="two">
+              <label class="field"><span class="label">Localidad</span>
+                <select class="select" name="localidad"><option>Merlo</option><option>San Antonio de Padua</option><option>Parque San Martín</option><option>Libertad</option><option>Ituzaingó</option><option>Moreno</option><option>Paso del Rey</option><option>Francisco Álvarez</option><option>Mariano Acosta</option><option>Otra</option></select>
+              </label>
+              <label class="field"><span class="label">Piso / depto <span class="opt">(opcional)</span></span><input class="input" type="text" name="piso" placeholder="Ej.: 2.º B"></label>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border-radius:22px;background:#FAF6EF">
+              <i class="fa-solid fa-lock" aria-hidden="true" style="color:#156B37;margin-top:4px"></i>
+              <p class="small muted" style="margin:0">Usamos la dirección solo para buscar propiedades parecidas y coordinar la visita.</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="w-body" data-step="3" hidden>
+            <legend class="w-q">Contanos cómo es</legend>
+            <div class="two">
+              <div class="field"><span class="label">Ambientes</span><div class="pill-row" data-group="ambientes">
+                <button type="button" class="pill" data-value="1">1</button><button type="button" class="pill" data-value="2">2</button><button type="button" class="pill is-on" data-value="3">3</button><button type="button" class="pill" data-value="4">4</button><button type="button" class="pill" data-value="5+">5+</button></div></div>
+              <div class="field"><span class="label">Baños</span><div class="pill-row" style="grid-template-columns:repeat(4,minmax(0,1fr))" data-group="banos">
+                <button type="button" class="pill is-on" data-value="1">1</button><button type="button" class="pill" data-value="2">2</button><button type="button" class="pill" data-value="3">3</button><button type="button" class="pill" data-value="4+">4+</button></div></div>
+            </div>
+            <div class="two">
+              <label class="field"><span class="label">Superficie cubierta (m²)</span><input class="input" type="number" name="cubierta" inputmode="numeric" min="0" placeholder="Ej.: 120"></label>
+              <label class="field"><span class="label">Superficie del lote (m²) <span class="opt">(opcional)</span></span><input class="input" type="number" name="lote" inputmode="numeric" min="0" placeholder="Ej.: 300"></label>
+            </div>
+            <div class="field"><span class="label">Estado general</span><div class="chips" data-group="estado">
+              <button type="button" class="chip" data-value="A estrenar">A estrenar</button><button type="button" class="chip is-on" data-value="Muy bueno">Muy bueno</button><button type="button" class="chip" data-value="Bueno">Bueno</button><button type="button" class="chip" data-value="A refaccionar">A refaccionar</button></div></div>
+            <div class="field"><span class="label">Tiene <span class="opt">(podés marcar varias)</span></span><div class="chips" data-group="extras" data-multi>
+              <button type="button" class="chip is-on" data-value="Cochera">Cochera</button><button type="button" class="chip" data-value="Pileta">Pileta</button><button type="button" class="chip" data-value="Quincho">Quincho</button><button type="button" class="chip" data-value="Jardín">Jardín</button><button type="button" class="chip" data-value="Balcón">Balcón</button></div></div>
+          </fieldset>
+
+          <fieldset class="w-body" data-step="4" hidden>
+            <legend class="w-q">¿Cómo te contactamos?</legend>
+            <label class="field"><span class="label">Nombre y apellido</span><input class="input" type="text" name="nombre" autocomplete="name" required></label>
+            <div class="two">
+              <label class="field"><span class="label">Teléfono / WhatsApp</span><input class="input" type="tel" name="telefono" autocomplete="tel" placeholder="11 1234-5678" required></label>
+              <label class="field"><span class="label">Email <span class="opt">(opcional)</span></span><input class="input" type="email" name="email" autocomplete="email"></label>
+            </div>
+            <div class="field"><span class="label">Preferís que te contactemos por</span><div class="seg" style="align-self:flex-start" data-group="canal">
+              <button type="button" class="is-on" data-value="WhatsApp">WhatsApp</button><button type="button" data-value="Llamada">Llamada</button><button type="button" data-value="Email">Email</button></div></div>
+            <label class="check"><input type="checkbox" name="acepto" required checked><span class="small">Acepto que Bertomeu Propiedades use estos datos para responder mi consulta.</span></label>
+          </fieldset>
+
+          <div class="w-body" data-step="5" hidden style="justify-content:center">
+            <span class="circle-icon" style="width:72px;height:72px;font-size:28px;background:#E1F2E5"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+            <h2 class="w-q" style="font-size:36px" id="done-title">¡Gracias!</h2>
+            <p class="lead" style="font-size:17px" id="done-text">Recibimos tu pedido.</p>
+            <div class="chips" id="done-chips"></div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+              <a class="btn btn-forest btn-sm" href="propiedades.html">Ver propiedades</a>
+              <button type="button" class="btn btn-line btn-sm" id="w-restart">Tasar otra propiedad</button>
+            </div>
+          </div>
+
+          <div class="w-foot" id="w-foot">
+            <button type="button" class="btn btn-line btn-sm is-hidden" id="w-back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i>Atrás</button>
+            <p class="w-error" id="w-error" role="alert"></p>
+            <button type="button" class="btn btn-primary btn-sm" id="w-next">Siguiente <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </form>
+      </div>
+    </header>
+
+    <!-- PROCESO -->
+    <section class="section" style="padding-top:48px">
+      <div class="container" style="display:flex;flex-direction:column;gap:40px">
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px" data-reveal>
+          <span class="tag">El proceso</span>
+          <h2 class="h-l">Cómo es una tasación con nosotros</h2>
+        </div>
+        <div class="steps4" data-reveal>
+          <div class="s4" style="background:#E1F2E5"><span class="s4-n">1</span><h3 class="h-s">Nos contás</h3><p>Completás el formulario o nos escribís con los datos básicos de tu propiedad.</p></div>
+          <div class="s4" style="background:#F2EADD"><span class="s4-n">2</span><h3 class="h-s">Te visitamos</h3><p>Coordinamos día y horario, y recorremos la propiedad con vos.</p></div>
+          <div class="s4" style="background:#F8E7DA"><span class="s4-n">3</span><h3 class="h-s">Comparamos</h3><p>Analizamos propiedades parecidas que se vendieron o están publicadas en la zona.</p></div>
+          <div class="s4" style="background:#FFFFFF"><span class="s4-n" style="background:#E1F2E5">4</span><h3 class="h-s">Te pasamos el valor</h3><p>Te contamos el valor sugerido y cómo llegamos a él. La decisión es tuya.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUÉ TENEMOS EN CUENTA + INFORME -->
+    <section class="section" style="padding-top:24px">
+      <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:48px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:22px" data-reveal>
+          <span class="tag" style="align-self:flex-start">Qué tenemos en cuenta</span>
+          <h2 class="h-l">Lo que miramos al tasar</h2>
+          <div class="factors">
+            <div class="factor"><span class="circle-icon" style="background:#E1F2E5"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i></span><div><h3 class="h-s">Ubicación</h3><p>La cuadra, los accesos y lo que hay cerca.</p></div></div>
+            <div class="factor"><span class="circle-icon" style="background:#F2EADD"><i class="fa-solid fa-ruler-combined" aria-hidden="true"></i></span><div><h3 class="h-s">Superficies</h3><p>Metros cubiertos, descubiertos y del lote.</p></div></div>
+            <div class="factor"><span class="circle-icon" style="background:#F8E7DA"><i class="fa-solid fa-paint-roller" aria-hidden="true"></i></span><div><h3 class="h-s">Estado</h3><p>Antigüedad, materiales y mantenimiento.</p></div></div>
+            <div class="factor"><span class="circle-icon" style="background:#E1F2E5"><i class="fa-regular fa-sun" aria-hidden="true"></i></span><div><h3 class="h-s">Distribución</h3><p>Luz, orientación y uso de los espacios.</p></div></div>
+            <div class="factor"><span class="circle-icon" style="background:#F2EADD"><i class="fa-regular fa-file-lines" aria-hidden="true"></i></span><div><h3 class="h-s">Documentación</h3><p>Título, planos y situación dominial.</p></div></div>
+            <div class="factor"><span class="circle-icon" style="background:#F8E7DA"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span><div><h3 class="h-s">Mercado</h3><p>Qué se vende y a qué precio en tu zona.</p></div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:18px" data-reveal>
+          <span class="tag tag-sand" style="align-self:flex-start">Qué recibís</span>
+          <h2 class="h-l">Un informe simple y claro</h2>
+          <div class="report" role="img" aria-label="Ejemplo ilustrativo de informe de tasación">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+              <img src="assets/img/logo.png" alt="" style="height:34px;width:auto">
+              <span class="tag tag-sand">Ejemplo ilustrativo</span>
+            </div>
+            <h3 class="h-m" style="margin-top:22px;font-size:24px">Casa 4 amb. · Parque San Martín</h3>
+            <p class="muted small" style="margin:14px 0 0">Valor sugerido de publicación</p>
+            <div class="price" style="font-size:34px;margin-top:4px"><small>USD</small>[mín.] – [máx.]</div>
+            <div class="range" aria-hidden="true"><span class="range-mark"></span></div>
+            <p class="muted small" style="margin:20px 0 10px">Propiedades usadas para comparar</p>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div class="comp"><img src="assets/img/padua-2.jpg" alt=""><span class="small"><strong>Casa 5 amb.</strong><br><span class="muted">S. A. de Padua · 170 m²</span></span><span class="small" style="font-weight:600">USD 115.000</span></div>
+              <div class="comp"><img src="assets/img/pasodelrey-3.jpg" alt=""><span class="small"><strong>Chalet 3 amb.</strong><br><span class="muted">Paso del Rey · 120 m²</span></span><span class="small" style="font-weight:600">USD 72.000</span></div>
+              <div class="comp"><img src="assets/img/libertad-2.jpg" alt=""><span class="small"><strong>Casa 5 amb.</strong><br><span class="muted">Libertad · 395 m²</span></span><span class="small" style="font-weight:600">USD 130.000</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section class="section" style="padding-top:24px">
+      <div class="container narrow" style="display:flex;flex-direction:column;gap:32px">
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px" data-reveal>
+          <span class="tag">Preguntas frecuentes</span>
+          <h2 class="h-l">Antes de tasar</h2>
+        </div>
+        <div id="faq">
+          <div class="faq-item"><button type="button" class="faq-q" aria-expanded="true" aria-controls="faq-1">¿La tasación tiene costo?<i class="fa-solid fa-plus" aria-hidden="true"></i></button><p class="faq-a" id="faq-1">Para vender o alquilar con nosotros, no tiene costo. Si necesitás una tasación formal para una sucesión o un trámite judicial, te informamos el arancel antes de empezar.</p></div>
+          <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-2">¿Me compromete a vender con ustedes?<i class="fa-solid fa-plus" aria-hidden="true"></i></button><p class="faq-a" id="faq-2" hidden>No. Te damos el valor y cómo llegamos a él. Qué hacer después lo decidís vos.</p></div>
+          <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-3">¿Cuánto tarda?<i class="fa-solid fa-plus" aria-hidden="true"></i></button><p class="faq-a" id="faq-3" hidden>Coordinamos la visita según tu disponibilidad. Después analizamos propiedades parecidas de la zona y te enviamos el valor.</p></div>
+          <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-4">¿Qué documentación necesito?<i class="fa-solid fa-plus" aria-hidden="true"></i></button><p class="faq-a" id="faq-4" hidden>Para la visita, ninguna. Si después decidís vender o alquilar, te pedimos título, planos y servicios al día.</p></div>
+          <div class="faq-item"><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-5">¿En qué zonas tasan?<i class="fa-solid fa-plus" aria-hidden="true"></i></button><p class="faq-a" id="faq-5" hidden>Merlo, San Antonio de Padua, Ituzaingó, Moreno, Paso del Rey, Francisco Álvarez, Mariano Acosta y alrededores.</p></div>
+        </div>
+        <div style="display:flex;justify-content:center"><a class="btn btn-forest" href="contacto.html">Hacer otra consulta</a></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/tokko.js"></script>
+<script src="js/common.js"></script>
+<script src="js/tasacion.js"></script>
+</body>
+</html>

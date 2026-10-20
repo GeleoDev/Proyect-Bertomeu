@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propiedades en venta y alquiler · Bertomeu Propiedades</title>
+  <meta name="description" content="Casas, departamentos, PH, locales, quintas y terrenos en venta y alquiler en Merlo, Moreno y Zona Oeste.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Figtree:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/propiedades.css">
+</head>
+<body data-page="propiedades">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="page">
+  <div class="nav-wrap" id="site-nav"></div>
+
+  <main id="contenido">
+    <header class="page-head" style="padding-bottom:44px">
+      <div class="container" style="display:flex;flex-direction:column;gap:18px">
+        <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><a href="propiedades.html">Propiedades</a><span id="crumb-op"></span></nav>
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:12px;max-width:720px">
+            <h1 class="h-xl" id="heading">Propiedades</h1>
+            <p class="lead" id="subheading">Casas, departamentos, locales y terrenos en venta y alquiler en Zona Oeste.</p>
+          </div>
+          <div class="seg" role="group" aria-label="Tipo de operación" style="background:#fff;box-shadow:0 10px 30px -24px rgba(34,48,42,.5)">
+            <button type="button" data-op-tab="todas">Todas · <span data-count="todas">0</span></button>
+            <button type="button" data-op-tab="venta">Venta · <span data-count="venta">0</span></button>
+            <button type="button" data-op-tab="alquiler">Alquiler · <span data-count="alquiler">0</span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container layout">
+      <!-- FILTROS: quedan fijos al hacer scroll en escritorio; en celular se abren como panel -->
+      <aside class="filters" id="filters" aria-label="Filtros de búsqueda">
+        <div class="f-head">
+          <span class="h-s" style="display:inline-flex;align-items:center;gap:10px;font-size:18px"><i class="fa-solid fa-sliders" aria-hidden="true" style="color:#156B37"></i>Filtros</span>
+          <span style="display:flex;align-items:center;gap:4px">
+            <button type="button" class="text-btn" data-clear>Limpiar</button>
+            <button type="button" class="icon-btn f-close" id="close-filters" aria-label="Cerrar filtros"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+          </span>
+        </div>
+        <div class="f-sec" style="padding-top:4px">
+          <label class="sr-only" for="f-q">Buscar</label>
+          <span class="input-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="f-q" class="input" type="search" placeholder="Calle, barrio o código"></span>
+        </div>
+        <fieldset class="f-sec">
+          <legend class="f-title">Operación</legend>
+          <div class="chips">
+            <button type="button" class="chip" data-op-chip="venta">Venta</button>
+            <button type="button" class="chip" data-op-chip="alquiler">Alquiler</button>
+          </div>
+        </fieldset>
+        <fieldset class="f-sec">
+          <legend class="f-title">Tipo de propiedad</legend>
+          <div class="chips" id="f-types"></div>
+        </fieldset>
+        <fieldset class="f-sec">
+          <legend class="f-title">Ubicación</legend>
+          <div style="display:flex;flex-direction:column" id="f-zones"></div>
+        </fieldset>
+        <fieldset class="f-sec">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <legend class="f-title" style="float:left">Precio</legend>
+            <div class="seg" style="padding:3px" role="group" aria-label="Moneda">
+              <button type="button" data-cur="USD" style="min-height:32px;padding:0 14px;font-size:13px">USD</button>
+              <button type="button" data-cur="ARS" style="min-height:32px;padding:0 14px;font-size:13px">$</button>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+            <input class="input" id="f-min" type="number" inputmode="numeric" min="0" placeholder="Desde" aria-label="Precio desde">
+            <input class="input" id="f-max" type="number" inputmode="numeric" min="0" placeholder="Hasta" aria-label="Precio hasta">
+          </div>
+        </fieldset>
+        <fieldset class="f-sec">
+          <legend class="f-title">Ambientes</legend>
+          <div class="pill-row" id="f-amb"></div>
+        </fieldset>
+        <fieldset class="f-sec">
+          <legend class="f-title">Dormitorios</legend>
+          <div class="pill-row" style="grid-template-columns:repeat(4,minmax(0,1fr))" id="f-dorm"></div>
+        </fieldset>
+        <fieldset class="f-sec" style="padding-bottom:22px">
+          <legend class="f-title">Características</legend>
+          <div style="display:flex;flex-direction:column" id="f-extras"></div>
+        </fieldset>
+        <div class="f-foot"><button type="button" class="btn btn-primary btn-block" id="apply-filters">Ver <span data-total>0</span> resultados</button></div>
+      </aside>
+
+      <div class="results">
+        <div class="r-bar">
+          <p class="r-count" aria-live="polite"><span data-total>0</span> <span id="total-label" style="color:inherit">propiedades</span></p>
+          <div class="r-tools">
+            <button type="button" class="btn btn-line btn-sm filter-toggle" id="open-filters"><i class="fa-solid fa-sliders" aria-hidden="true"></i>Filtros <span id="active-count"></span></button>
+            <select class="select" id="sort" aria-label="Ordenar resultados">
+              <option value="recientes">Más recientes</option>
+              <option value="precio-asc">Menor precio</option>
+              <option value="precio-desc">Mayor precio</option>
+              <option value="sup">Mayor superficie</option>
+            </select>
+            <button type="button" class="view-btn is-on" data-view="grid" aria-label="Ver en grilla" aria-pressed="true"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i></button>
+            <button type="button" class="view-btn" data-view="list" aria-label="Ver en lista" aria-pressed="false"><i class="fa-solid fa-list" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div class="chips" id="active-chips" aria-label="Filtros activos"></div>
+        <div class="rgrid" id="results"><p class="loading-note">Cargando propiedades…</p></div>
+
+        <div class="empty" id="empty" hidden>
+          <span class="circle-icon" style="background:#E1F2E5"><i class="fa-regular fa-face-meh" aria-hidden="true"></i></span>
+          <h2 class="h-m">No hay propiedades con estos filtros</h2>
+          <p class="muted" style="margin:0;max-width:440px">Probá con otra zona o un rango de precio más amplio. Si buscás algo puntual, contanos y te avisamos.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+            <button type="button" class="btn btn-forest btn-sm" data-clear>Limpiar filtros</button>
+            <a class="btn btn-line btn-sm" href="contacto.html">Contanos qué buscás</a>
+          </div>
+        </div>
+
+        <div class="alert-card">
+          <div style="display:flex;gap:16px;align-items:center">
+            <span class="circle-icon"><i class="fa-regular fa-bell" aria-hidden="true"></i></span>
+            <div><h2 class="h-s">¿No encontrás lo que buscás?</h2><p class="muted" style="margin:2px 0 0">Dejanos tu búsqueda y te avisamos cuando entre algo parecido.</p></div>
+          </div>
+          <a class="btn btn-forest btn-sm" href="contacto.html">Avisame</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/tokko.js"></script>
+<script src="js/common.js"></script>
+<script src="js/propiedades.js"></script>
+</body>
+</html>

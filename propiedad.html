@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propiedad · Bertomeu Propiedades</title>
+  <meta name="description" content="Ficha de propiedad de Bertomeu Propiedades.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Figtree:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/propiedad.css">
+</head>
+<body data-page="propiedades">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="page">
+  <div class="nav-wrap" id="site-nav"></div>
+
+  <!-- La ficha se completa con js/propiedad.js a partir de ?id= -->
+  <main id="contenido">
+    <div class="container" style="padding-top:128px;display:flex;flex-direction:column;gap:24px">
+      <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><a href="propiedades.html">Propiedades</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><a id="crumb-op" href="propiedades.html">Venta</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span id="crumb-title"></span></nav>
+
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:840px">
+          <div class="chips" id="p-tags"></div>
+          <h1 class="h-xl" id="p-title">Cargando…</h1>
+          <p class="paddr" style="font-size:16px;margin:0"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span id="p-addr"></span></p>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button type="button" class="icon-btn" id="share" aria-label="Compartir"><i class="fa-solid fa-arrow-up-from-bracket" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn" id="fav" aria-label="Guardar en favoritos" aria-pressed="false"><i class="fa-regular fa-heart" aria-hidden="true"></i></button>
+          <button type="button" class="icon-btn" id="print" aria-label="Imprimir ficha"><i class="fa-solid fa-print" aria-hidden="true"></i></button>
+        </div>
+      </div>
+
+      <div class="gallery" id="gallery"></div>
+    </div>
+
+    <div class="container detail">
+      <div class="d-main">
+        <div class="keyfacts" id="keyfacts"></div>
+        <section><h2 class="h-m" style="margin-bottom:16px">Descripción</h2><div id="desc"></div><button type="button" class="btn btn-line btn-sm" id="desc-toggle" hidden>Leer descripción completa</button></section>
+        <section><h2 class="h-m" style="margin-bottom:16px">Características</h2><div class="feat-cols" id="features"></div></section>
+        <section><h2 class="h-m" style="margin-bottom:16px">Superficies y detalles</h2><dl class="spec-table" id="specs"></dl></section>
+        <section><h2 class="h-m" style="margin-bottom:16px">Ubicación</h2><div class="map" id="map"></div><p class="muted small" style="margin:10px 0 0">Ubicación aproximada.</p></section>
+      </div>
+
+      <aside class="d-side" aria-label="Precio y contacto">
+        <div class="price-card">
+          <div style="display:flex;justify-content:space-between;align-items:center"><span class="muted small" style="font-weight:600" id="price-label">Precio</span><span class="muted small" id="p-ref"></span></div>
+          <div class="price-big" id="p-price"></div>
+          <p class="muted small" id="p-exp" style="margin:-6px 0 0" hidden></p>
+          <a class="btn btn-primary btn-block" id="wa-link" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>Consultar por WhatsApp</a>
+          <hr class="rule">
+          <form id="visit-form" style="display:flex;flex-direction:column;gap:14px">
+            <h2 class="h-s">Coordiná una visita</h2>
+            <div class="days" role="group" aria-label="Elegí un día" id="days"></div>
+            <div class="seg" style="width:100%" role="group" aria-label="Franja horaria">
+              <button type="button" class="is-on" data-slot="mañana" style="flex:1" aria-pressed="true">Mañana</button>
+              <button type="button" data-slot="tarde" style="flex:1" aria-pressed="false">Tarde</button>
+            </div>
+            <label class="field"><span class="label">Nombre y apellido</span><input class="input" type="text" name="nombre" autocomplete="name" required></label>
+            <label class="field"><span class="label">Teléfono</span><input class="input" type="tel" name="telefono" autocomplete="tel" required></label>
+            <label class="field"><span class="label">Mensaje</span><textarea class="textarea" name="mensaje" id="visit-msg" style="min-height:96px"></textarea></label>
+            <button type="submit" class="btn btn-forest btn-block">Pedir visita</button>
+          </form>
+          <div class="success" id="visit-ok" hidden>
+            <span class="circle-icon" style="background:#E1F2E5"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></span>
+            <h2 class="h-m">¡Listo!</h2>
+            <p class="muted" style="margin:0" id="visit-ok-text"></p>
+            <button type="button" class="btn btn-line btn-sm" id="visit-reset">Cambiar día</button>
+          </div>
+        </div>
+        <div class="agent">
+          <span class="agent-av" aria-hidden="true">LB</span>
+          <div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="color:#C9D9CE;font-size:13px">Te atiende</span><strong>Lorena Bertomeu</strong><a href="tel:+542204825501" style="color:#8FD9A6;font-size:14px">(0220) 482-5501</a></div>
+        </div>
+        <a class="btn btn-soft btn-block" id="contact-link" href="contacto.html"><i class="fa-regular fa-envelope" aria-hidden="true" style="color:#156B37"></i>Consultar por email</a>
+      </aside>
+    </div>
+
+    <section class="section" style="padding-top:24px">
+      <div class="container" style="display:flex;flex-direction:column;gap:36px">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px">
+          <h2 class="h-l" id="similar-title">Otras propiedades</h2>
+          <a class="link" id="similar-link" href="propiedades.html">Ver todas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="pgrid" id="similar"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotos de la propiedad">
+  <img id="lb-img" src="" alt="">
+  <button type="button" class="icon-btn lb-close" id="lb-close" aria-label="Cerrar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+  <button type="button" class="icon-btn lb-prev" id="lb-prev" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+  <button type="button" class="icon-btn lb-next" id="lb-next" aria-label="Foto siguiente"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/tokko.js"></script>
+<script src="js/common.js"></script>
+<script src="js/propiedad.js"></script>
+</body>
+</html>

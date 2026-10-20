@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · Bertomeu Propiedades</title>
+  <meta name="description" content="Escribinos por WhatsApp, llamanos o visitanos en Maipú 785, Merlo.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Figtree:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body data-page="contacto">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="page">
+  <div class="nav-wrap" id="site-nav"></div>
+
+  <main id="contenido">
+    <header class="page-head" style="padding-bottom:48px">
+      <div class="container" style="display:flex;flex-direction:column;gap:18px">
+        <nav class="crumbs" aria-label="Ruta"><a href="index.html">Inicio</a><i class="fa-solid fa-chevron-right" aria-hidden="true"></i><span>Contacto</span></nav>
+        <h1 class="h-hero rise">Contacto</h1>
+        <p class="lead rise d1">Escribinos por WhatsApp, llamanos o completá el formulario. Si te interesa una propiedad, podés elegirla abajo.</p>
+      </div>
+    </header>
+
+    <div class="container c-layout">
+      <div class="c-form">
+        <form id="contact-form" novalidate style="display:flex;flex-direction:column;gap:26px">
+          <div class="field">
+            <span class="label" id="motivo-label">¿En qué te podemos ayudar?</span>
+            <div class="chips" role="group" aria-labelledby="motivo-label" id="motivos">
+              <button type="button" class="chip is-on" data-motivo="comprar" aria-pressed="true">Comprar</button>
+              <button type="button" class="chip" data-motivo="alquilar" aria-pressed="false">Alquilar</button>
+              <button type="button" class="chip" data-motivo="vender" aria-pressed="false">Vender</button>
+              <button type="button" class="chip" data-motivo="tasar" aria-pressed="false">Tasar</button>
+              <button type="button" class="chip" data-motivo="admin" aria-pressed="false">Administración</button>
+              <button type="button" class="chip" data-motivo="otra" aria-pressed="false">Otra consulta</button>
+            </div>
+          </div>
+
+          <!-- Propiedad de interés: buscador con miniaturas -->
+          <div class="field">
+            <label class="label" for="prop-input">Propiedad que te interesa <span class="opt">(opcional)</span></label>
+            <div id="picked" hidden></div>
+            <div class="combo" id="combo">
+              <span class="input-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><input id="prop-input" class="input" type="text" role="combobox" aria-expanded="false" aria-controls="prop-list" aria-autocomplete="list" autocomplete="off" placeholder="Buscá por nombre, calle o barrio"></span>
+              <div class="combo-list" id="prop-list" role="listbox" aria-label="Propiedades" hidden></div>
+            </div>
+          </div>
+
+          <div class="two">
+            <label class="field"><span class="label">Nombre y apellido</span><input class="input" type="text" name="nombre" autocomplete="name" required></label>
+            <label class="field"><span class="label">Teléfono / WhatsApp</span><input class="input" type="tel" name="telefono" autocomplete="tel" placeholder="11 1234-5678" required></label>
+          </div>
+          <label class="field"><span class="label">Email</span><input class="input" type="email" name="email" autocomplete="email" placeholder="tu@email.com"></label>
+          <label class="field"><span class="label">Mensaje</span><textarea class="textarea" name="mensaje" id="msg" placeholder="Contanos qué estás buscando."></textarea></label>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px">
+            <div class="field" style="gap:10px"><span class="label" id="canal-label">Te respondemos por</span>
+              <div class="seg" role="group" aria-labelledby="canal-label" id="canales">
+                <button type="button" class="is-on" data-canal="WhatsApp" aria-pressed="true">WhatsApp</button>
+                <button type="button" data-canal="Llamada" aria-pressed="false">Llamada</button>
+                <button type="button" data-canal="Email" aria-pressed="false">Email</button>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-forest">Enviar mensaje</button>
+          </div>
+          <p class="w-error" id="c-error" role="alert" style="color:#B3261E;margin:0"></p>
+        </form>
+
+        <div class="c-success" id="c-success" hidden>
+          <span class="circle-icon" style="width:72px;height:72px;font-size:26px;background:#E1F2E5"><i class="fa-regular fa-paper-plane" aria-hidden="true"></i></span>
+          <h2 class="h-xl" id="c-success-title">¡Gracias!</h2>
+          <p class="lead" id="c-success-text">Recibimos tu mensaje.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn btn-primary" href="propiedades.html">Ver propiedades</a>
+            <button type="button" class="btn btn-line" id="c-reset">Enviar otro mensaje</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="c-side" aria-label="Canales de contacto">
+        <a class="channel wa" href="https://api.whatsapp.com/send?phone=5491152267955&text=Hola%2C%20quisiera%20hacer%20una%20consulta" target="_blank" rel="noopener">
+          <span class="circle-icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+          <span><small>WhatsApp</small><strong>+54 9 11 5226-7955</strong></span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true" style="margin-left:auto"></i>
+        </a>
+        <a class="channel" href="tel:+542204825501">
+          <span class="circle-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+          <span><small>Teléfono</small><strong>(0220) 482-5501</strong></span>
+        </a>
+        <a class="channel" href="mailto:info@bertomeupropiedades.com">
+          <span class="circle-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+          <span style="min-width:0"><small>Email</small><strong style="overflow-wrap:anywhere">info@bertomeupropiedades.com</strong></span>
+        </a>
+        <div class="card" style="padding:12px;display:flex;flex-direction:column;gap:12px;border-radius:30px">
+          <div class="office-map"><iframe title="Mapa de la oficina en Maipú 785, Merlo" src="https://maps.google.com/maps?q=Maip%C3%BA%20785%2C%20Merlo%2C%20Buenos%20Aires&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 8px 6px">
+            <div><strong style="display:block;font-size:16px">Maipú 785, Merlo</strong><span class="muted small">[Horario de atención]</span></div>
+            <a class="btn btn-line btn-sm" href="https://maps.google.com/?q=Maipu+785+Merlo+Buenos+Aires" target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;padding-top:4px">
+          <a class="icon-btn" href="https://www.instagram.com/bertomeuprop/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a class="icon-btn" href="https://www.facebook.com/bertomeupropiedades" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a class="icon-btn" href="https://www.youtube.com/@bertomeupropiedades8187" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/tokko.js"></script>
+<script src="js/common.js"></script>
+<script src="js/contacto.js"></script>
+</body>
+</html>

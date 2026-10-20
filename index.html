@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bertomeu Propiedades · Inmobiliaria en Merlo, Zona Oeste</title>
+  <meta name="description" content="Inmobiliaria en Merlo. Venta, alquiler, tasaciones y administración de propiedades en Zona Oeste desde hace más de diez años.">
+  <link rel="icon" href="assets/img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Figtree:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/inicio.css">
+</head>
+<body data-page="inicio">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<div class="page">
+  <div class="nav-wrap" id="site-nav"></div>
+
+  <main id="contenido">
+    <!-- HERO EN VIDEO -->
+    <section class="hero-v">
+      <div class="hero-frame">
+        <video id="hero-video" src="assets/video/hero.mp4" poster="assets/video/hero-poster.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <img class="hero-logo rise" src="assets/img/logo-white.png" alt="Bertomeu Propiedades">
+          <h1 class="hero-type rise d1">Te acompañamos a<br><span class="typed" id="typed" aria-live="polite">comprar tu casa<span class="caret" aria-hidden="true"></span></span></h1>
+          <p class="hero-sub rise d2">Inmobiliaria en Merlo · Zona Oeste</p>
+          <div class="hero-ctas rise d3">
+            <a class="btn btn-glass" href="propiedades.html?op=venta">Quiero comprar</a>
+            <a class="btn btn-glass" href="propiedades.html?op=alquiler">Quiero alquilar</a>
+            <a class="btn btn-primary" href="tasacion.html">Quiero tasar</a>
+          </div>
+        </div>
+        <span class="hero-place"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Maipú 785, Merlo</span>
+        <a class="hero-scroll" href="#intro">Conocenos<i class="fa-solid fa-chevron-down bob" aria-hidden="true"></i></a>
+        <button class="video-toggle" id="video-toggle" type="button" aria-label="Pausar video"><i class="fa-solid fa-pause" aria-hidden="true"></i></button>
+      </div>
+    </section>
+
+    <!-- BUSCADOR -->
+    <div class="container">
+      <form class="search" action="propiedades.html" method="get" role="search" aria-label="Buscar propiedades">
+        <input type="hidden" name="op" id="search-op" value="venta">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
+          <h2 class="h-m" style="font-size:26px;padding-left:6px">¿Qué estás buscando?</h2>
+          <div class="seg" role="group" aria-label="Operación">
+            <button type="button" class="is-on" data-op="venta" aria-pressed="true">Comprar</button>
+            <button type="button" data-op="alquiler" aria-pressed="false">Alquilar</button>
+          </div>
+        </div>
+        <div class="search-row">
+          <label class="field"><span class="label">Tipo</span>
+            <select class="select" name="tipo"><option value="">Todas</option><option>Casa</option><option>Departamento</option><option>PH</option><option>Local</option><option>Terreno</option><option>Quinta</option></select>
+          </label>
+          <label class="field"><span class="label">Zona</span>
+            <select class="select" name="zona"><option value="">Toda Zona Oeste</option><option>Merlo Centro</option><option>Merlo Norte</option><option>Parque San Martín</option><option>Libertad</option><option>San Antonio de Padua</option><option>Paso del Rey</option><option>Francisco Álvarez</option></select>
+          </label>
+          <label class="field"><span class="label">Ambientes</span>
+            <select class="select" name="amb"><option value="">Indistinto</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5 o más</option></select>
+          </label>
+          <button class="btn btn-forest" type="submit" style="min-height:54px"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>Buscar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- INTRO -->
+    <section id="intro" class="section" style="overflow:hidden">
+      <div class="container intro-grid">
+        <div style="display:flex;flex-direction:column;gap:24px" data-reveal>
+          <span class="tag" style="align-self:flex-start"><i class="fa-regular fa-face-smile" aria-hidden="true"></i>Hola</span>
+          <h2 class="h-xl">Somos <span class="it">Bertomeu Propiedades</span></h2>
+          <p class="lead">Una inmobiliaria de Merlo. Desde hace más de diez años vendemos, alquilamos, tasamos y administramos propiedades en Zona Oeste.</p>
+          <p class="lead">Trabajamos con martilleros matriculados y te atendemos en persona, por teléfono o por WhatsApp, como te quede más cómodo.</p>
+          <div class="chips" style="margin-top:6px">
+            <span class="tag tag-white"><i class="fa-solid fa-location-dot" aria-hidden="true" style="color:#156B37"></i>Maipú 785, Merlo</span>
+            <span class="tag tag-white"><i class="fa-solid fa-id-card" aria-hidden="true" style="color:#156B37"></i>Colegio de Martilleros de Morón</span>
+            <span class="tag tag-white"><i class="fa-solid fa-house" aria-hidden="true" style="color:#156B37"></i>Más de 200 propiedades publicadas</span>
+          </div>
+          <a class="link" href="nosotros.html" style="margin-top:6px">Conocé al equipo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="intro-art" data-reveal>
+          <div class="intro-a blobby"><img src="assets/img/padua-3.jpg" alt="Casa con patio en Zona Oeste" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="intro-b round-img"><img src="assets/img/lima-3.jpg" alt="Quincho con parrilla"></div>
+          <div class="sticker floaty"><strong>+10</strong>años en<br>Zona Oeste</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" style="padding-top:24px">
+      <div class="container" style="display:flex;flex-direction:column;gap:44px">
+        <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px" data-reveal>
+          <span class="tag">Qué hacemos</span>
+          <h2 class="h-l">Te ayudamos con tu propiedad</h2>
+        </div>
+        <div class="svc-grid" data-reveal>
+          <a class="svc" href="propiedades.html?op=venta" style="background:#E1F2E5">
+            <span class="circle-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></span>
+            <h3 class="h-m">Venta</h3>
+            <p>Tasamos tu propiedad, sacamos las fotos, la publicamos y te acompañamos hasta la escritura.</p>
+            <span class="link">Ver propiedades en venta <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="svc" href="propiedades.html?op=alquiler" style="background:#F2EADD">
+            <span class="circle-icon"><i class="fa-solid fa-key" aria-hidden="true"></i></span>
+            <h3 class="h-m">Alquiler</h3>
+            <p>Publicamos tu propiedad, buscamos inquilinos y preparamos el contrato. Si buscás alquilar, te mostramos lo disponible.</p>
+            <span class="link">Ver alquileres <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="svc" href="tasacion.html" style="background:#F8E7DA">
+            <span class="circle-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
+            <h3 class="h-m">Tasaciones</h3>
+            <p>Visitamos tu propiedad y te damos un valor de mercado basado en propiedades similares de la zona.</p>
+            <span class="link">Pedir una tasación <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+          <a class="svc" href="contacto.html?motivo=admin" style="background:#FFFFFF">
+            <span class="circle-icon" style="background:#E1F2E5"><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i></span>
+            <h3 class="h-m">Administración</h3>
+            <p>Cobramos el alquiler, gestionamos los ajustes y coordinamos el mantenimiento de tu propiedad.</p>
+            <span class="link">Consultar <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTACADAS -->
+    <section class="section" style="padding-top:24px">
+      <div class="container" style="display:flex;flex-direction:column;gap:40px">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px" data-reveal>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <span class="tag" style="align-self:flex-start">Propiedades</span>
+            <h2 class="h-l">Algunas de nuestras propiedades</h2>
+          </div>
+          <div class="seg" role="group" aria-label="Filtrar propiedades destacadas" id="feat-tabs">
+            <button type="button" class="is-on" data-feat="todas" aria-pressed="true">Todas</button>
+            <button type="button" data-feat="venta" aria-pressed="false">Venta</button>
+            <button type="button" data-feat="alquiler" aria-pressed="false">Alquiler</button>
+          </div>
+        </div>
+        <div class="pgrid" id="featured" aria-live="polite"><p class="loading-note">Cargando propiedades…</p></div>
+        <div style="display:flex;justify-content:center">
+          <a class="btn btn-forest" href="propiedades.html">Ver todas las propiedades <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section style="padding:24px 0 104px">
+      <div class="container">
+        <div class="panel panel-forest on-dark how" style="padding:64px" data-reveal>
+          <span class="blob drift" style="width:380px;height:380px;right:-120px;top:-120px;background:#2D6B45;opacity:.6"></span>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:56px;align-items:center">
+            <div style="display:flex;flex-direction:column;gap:22px">
+              <span class="tag" style="align-self:flex-start">Cómo trabajamos</span>
+              <h2 class="h-l">Así acompañamos una venta, <span class="it">paso a paso</span></h2>
+              <p class="lead">Cada operación tiene una persona a cargo que te cuenta en qué etapa está y qué sigue.</p>
+              <div class="round-img" style="height:240px;margin-top:8px"><img src="assets/img/libertad-3.jpg" alt="Living luminoso con biblioteca"></div>
+            </div>
+            <div class="steps">
+              <div class="step"><span class="step-n">1</span><div><h3 class="h-s">Nos conocemos</h3><p>Charlamos sobre lo que necesitás y visitamos la propiedad.</p></div></div>
+              <div class="step"><span class="step-n">2</span><div><h3 class="h-s">Tasamos</h3><p>Te damos un valor de mercado basado en propiedades similares de la zona.</p></div></div>
+              <div class="step"><span class="step-n">3</span><div><h3 class="h-s">Publicamos</h3><p>Sacamos las fotos, preparamos la publicación y la subimos a los portales.</p></div></div>
+              <div class="step"><span class="step-n">4</span><div><h3 class="h-s">Te acompañamos</h3><p>Coordinamos las visitas, recibimos las ofertas y estamos en cada firma hasta la entrega de llaves.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TASACIÓN -->
+    <section style="padding:0 0 104px">
+      <div class="container">
+        <div class="panel panel-mint" data-reveal>
+          <span class="blob blob-peach" style="width:300px;height:300px;left:30%;bottom:-160px"></span>
+          <div class="cta-grid">
+            <div style="display:flex;flex-direction:column;gap:20px">
+              <span class="tag tag-white" style="align-self:flex-start">Tasaciones</span>
+              <h2 class="h-l">¿Querés saber cuánto vale tu propiedad?</h2>
+              <p class="lead" style="color:#3F4B44">Coordinamos una visita y te damos un valor de mercado. Sin compromiso.</p>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:4px">
+                <a class="btn btn-forest" href="tasacion.html">Pedir una tasación <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn-soft" href="https://api.whatsapp.com/send?phone=5491152267955&text=Hola%2C%20quiero%20tasar%20mi%20propiedad" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true" style="color:#156B37"></i>Consultar por WhatsApp</a>
+              </div>
+            </div>
+            <div class="blobby" style="height:360px"><img src="assets/img/pasodelrey-1.jpg" alt="Casa con jardín y pileta" style="width:100%;height:100%;object-fit:cover"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZONAS -->
+    <section class="section" style="padding-top:24px">
+      <div class="container" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px">
+        <span class="tag" data-reveal>Dónde trabajamos</span>
+        <h2 class="h-l" data-reveal>Merlo, Moreno, Ituzaingó y alrededores</h2>
+        <div class="zone-cloud" data-reveal>
+          <a href="propiedades.html?zona=Merlo%20Centro"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Merlo Centro</a>
+          <a href="propiedades.html?zona=Parque%20San%20Mart%C3%ADn"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Parque San Martín</a>
+          <a href="propiedades.html?zona=San%20Antonio%20de%20Padua"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>San Antonio de Padua</a>
+          <a href="propiedades.html?zona=Libertad"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Libertad</a>
+          <a href="propiedades.html?zona=Merlo%20Norte"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Merlo Norte</a>
+          <a href="propiedades.html?zona=Paso%20del%20Rey"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Paso del Rey</a>
+          <a href="propiedades.html?zona=Francisco%20%C3%81lvarez"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Francisco Álvarez</a>
+        </div>
+        <div class="zone-photos" style="margin-top:20px" data-reveal>
+          <figure><img src="assets/img/rodeo-1.jpg" alt="Quinta con pileta en Francisco Álvarez" loading="lazy"><figcaption>Francisco Álvarez</figcaption></figure>
+          <figure><img src="assets/img/padua-2.jpg" alt="Casa con patio en San Antonio de Padua" loading="lazy"><figcaption>San Antonio de Padua</figcaption></figure>
+          <figure><img src="assets/img/suipacha-1.jpg" alt="Local comercial en Merlo Centro" loading="lazy"><figcaption>Merlo Centro</figcaption></figure>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:40px" data-reveal>
+          <span class="muted small">Somos parte de</span>
+          <div class="assoc" style="justify-content:center">
+            <span class="assoc-chip" style="box-shadow:0 8px 22px -16px rgba(34,48,42,.5)"><img src="assets/img/martilleros.png" alt="Colegio de Martilleros de Morón"></span>
+            <span class="assoc-chip" style="box-shadow:0 8px 22px -16px rgba(34,48,42,.5)"><img src="assets/img/crs.png" alt="CRS"></span>
+            <span class="assoc-chip" style="box-shadow:0 8px 22px -16px rgba(34,48,42,.5)">CIA</span>
+            <span class="assoc-chip" style="box-shadow:0 8px 22px -16px rgba(34,48,42,.5)">REALTOR®</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEÑAS DE GOOGLE -->
+    <section class="section" style="padding-top:24px" aria-label="Opiniones de clientes en Google" id="resenas">
+      <div class="container" style="display:flex;flex-direction:column;gap:36px">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px" data-reveal>
+          <div style="display:flex;flex-direction:column;gap:14px;max-width:640px">
+            <span class="tag" style="align-self:flex-start">Opiniones</span>
+            <h2 class="h-l">Lo que dicen nuestros clientes</h2>
+          </div>
+          <div class="g-summary">
+            <span class="g-logo" aria-hidden="true"><i class="fa-brands fa-google"></i></span>
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="display:flex;align-items:center;gap:8px"><strong class="g-score">4,5</strong><span class="g-stars" role="img" aria-label="4,5 de 5 estrellas"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span></span>
+              <span class="muted small">196 opiniones en Google</span>
+            </div>
+            <a class="btn btn-soft btn-sm" href="https://www.google.com/maps/place/Bertomeu+Propiedades/@-34.6692904,-58.7275443,17z/data=!4m8!3m7!1s0x95bcbffa5ca636a1:0xeac2a5bac6a1e14d!8m2!3d-34.6692904!4d-58.7275443!9m1!1b1" target="_blank" rel="noopener">Ver en Google</a>
+          </div>
+        </div>
+        <div class="rv-viewport"><div class="rv-track" id="rv-track"></div></div>
+        <div class="rv-controls">
+          <button type="button" class="icon-btn" id="rv-prev" aria-label="Opiniones anteriores"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+          <div class="rv-dots" id="rv-dots"></div>
+          <button type="button" class="icon-btn" id="rv-next" aria-label="Opiniones siguientes"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/tokko.js"></script>
+<script src="js/common.js"></script>
+<script src="js/inicio.js"></script>
+</body>
+</html>
